@@ -1,19 +1,27 @@
+#define BAUD_RATE 9600
 #define TIME_OUT_DELAY 500
+
+#define OFF "~0000 0"
+#define ON "~0000 1"
+#define GET_POWER_STATE "~00124 1"
+
+#define RX 2
+#define TX 3
 
 #include <SoftwareSerial.h>;
 
-SoftwareSerial serial (2, 3);
+SoftwareSerial serial (RX, TX);
 unsigned long timer;
 
 void setup ()
 {
-	serial.begin(9600);
 	Serial.begin(9600);
+	serial.begin(BAUD_RATE);
 }
 
 void loop ()
 {
-	if (Serial.available())
+	if (!Serial.available())
 	{
 		return;
 	}
@@ -22,14 +30,12 @@ void loop ()
 
 	if (c == '0')
 	{
-		Serial.println("Off");
-		serial.println("~0000 0");
+		Off();
 	}
 
 	if (c == '1')
 	{
-		Serial.println("On");
-		serial.println("~0000 1");
+		On();
 	}
 
 	if (c == '2')
@@ -38,6 +44,37 @@ void loop ()
 		Serial.print("Power: ");
 		Serial.println(state);
 	}
+
+	if (c == 'p')
+	{
+		int state = GetPowerState();
+
+		if (state == 0)
+		{
+			On();
+		}
+		else if (state == 1)
+		{
+			Off();
+		}
+		else
+		{
+			Serial.print("Power state ");
+			Serial.println(state);
+		}
+	}
+}
+
+void Off ()
+{
+	Serial.println("Off");
+	serial.println(OFF);
+}
+
+void On ()
+{
+	Serial.println("On");
+	serial.println(ON);
 }
 
 char WaitAndRead ()
@@ -69,7 +106,7 @@ int GetPowerState ()
 		serial.read();
 	}
 
-	serial.println("~00124 1");
+	serial.println(GET_POWER_STATE);
 	char prefix = WaitAndRead();
 
 	if (prefix < 0)
