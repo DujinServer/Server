@@ -121,9 +121,9 @@ int GetPowerState ()
 		return -1;
 	}
 
-	char sufix = WaitAndRead();
+	char suffix = WaitAndRead();
 
-	if (sufix < 0)
+	if (suffix < 0)
 	{
 		return -1;
 	}
@@ -133,7 +133,7 @@ int GetPowerState ()
 		return GetPowerState();
 	}
 
-	if (sufix != 106)
+	if (suffix != 106)
 	{
 		return GetPowerState();
 	}
