@@ -15,6 +15,12 @@ window.addEventListener("DOMContentLoaded", function () {
 	
 	function copy (value)
 	{
+		if (/Android/.test(navigator.userAgent))
+		{
+			navigator.clipboard.writeText("Test clip");
+			return;
+		}
+		
 		var t = document.createElement("textarea");
 		document.body.appendChild(t);
 		t.value = value;
