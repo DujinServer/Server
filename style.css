@@ -40,5 +40,13 @@ a:hover
 
 pre
 {
+	background-color: #eeeeee;
+	border-radius: 6px;
 	font-family: inherit;
+	font-size: 85%;
+	line-height: 1.45;
+	margin-bottom: 16px;
+	margin-top: 0;
+	overflow: auto;
+	padding: 16px;
 }
