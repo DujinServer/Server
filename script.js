@@ -17,6 +17,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	{
 		if (/Android/.test(navigator.userAgent))
 		{
+			alert("Coppy");
 			navigator.clipboard.writeText("Test clip");
 			return;
 		}
