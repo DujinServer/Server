@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
-	var elements = document.getElementsByClasssName("code");
+	var elements = document.getElementsByClassName("code");
 	
 	for (var element of elements)
 	{
