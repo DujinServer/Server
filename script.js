@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", function () {
 			return;
 		}
 		
+		alert("Desktop");
 		var t = document.createElement("textarea");
 		document.body.appendChild(t);
 		t.value = value;
