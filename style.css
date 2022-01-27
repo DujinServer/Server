@@ -38,11 +38,15 @@ a:hover
 	color: #FC945C;
 }
 
-pre.code
+pre 
+{
+	font-family: inherit;
+}
+
+.code
 {
 	background-color: #eeeeee;
 	border-radius: 6px;
-	font-family: inherit;
 	font-size: 85%;
 	line-height: 1.45;
 	margin-bottom: 16px;
