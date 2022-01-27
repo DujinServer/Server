@@ -33,6 +33,10 @@ a
 	text-decoration: none;
 }
 
+pre
+{
+	font-family: inherit;
+
 a:hover
 {
 	color: #FC945C;
