@@ -1,3 +1,11 @@
+function CreateHeader () 
+{
+	var link = document.location.href;
+	var directory = link[link.length - 2];
+	var title = document.createElement('h2');
+	title.innerText = directory;
+}
+
 window.addEventListener("DOMContentLoaded", function () {
 	var elements = document.getElementsByClassName("code");
 	
