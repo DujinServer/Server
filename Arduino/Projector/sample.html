@@ -9,7 +9,7 @@
 	sample
 </h2>
 
-<pre><code>
+<pre>
 #define BAUD_RATE 9600
 #define TIME_OUT_DELAY 500
 
@@ -20,7 +20,7 @@
 #define RX 2
 #define TX 3
 
-#include <SoftwareSerial.h>;
+#include &lt;SoftwareSerial.h&gt;;
 
 SoftwareSerial serial (RX, TX);
 unsigned long timer;
@@ -98,7 +98,7 @@ char WaitAndRead ()
 	{
 		while (!serial.available())
 		{
-			if (timer + TIME_OUT_DELAY < millis())
+			if (timer + TIME_OUT_DELAY &lt; millis())
 			{
 				return -1;
 			}
@@ -106,7 +106,7 @@ char WaitAndRead ()
 
 		c = serial.read();
 	}
-	while (c < 0);
+	while (c &lt; 0);
 
 	return c;
 }
@@ -121,21 +121,21 @@ int GetPowerState ()
 	serial.println(GET_POWER_STATE);
 	char prefix = WaitAndRead();
 
-	if (prefix < 0)
+	if (prefix &lt; 0)
 	{
 		return -1;
 	}
 
 	char state = WaitAndRead();
 
-	if (state < 0)
+	if (state &lt; 0)
 	{
 		return -1;
 	}
 
 	char suffix = WaitAndRead();
 
-	if (suffix < 0)
+	if (suffix &lt; 0)
 	{
 		return -1;
 	}
@@ -162,4 +162,4 @@ int GetPowerState ()
 
 	return GetPowerState();
 }
-</code></pre>
+</pre>
