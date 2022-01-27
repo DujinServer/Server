@@ -1,4 +1,4 @@
-function CreateHeader () 
+function CreateTitle () 
 {
 	var link = document.location.href;
 	var directory = link[link.length - 2];
