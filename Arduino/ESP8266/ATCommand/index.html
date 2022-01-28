@@ -1,0 +1,31 @@
+<title>Server</title>
+<meta name="viewport" content="width=device-width">
+<script src="/Server/script.js"></script>
+<link rel="stylesheet" href="/Server/style.css">
+<!-- <script src="/Users/dujin/Desktop/Server/script.js"></script>
+<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css"> -->
+<h2></h2>
+<script>SetTitle()</script>
+<ul>
+	<li>Prefix: AT</li>
+	<li>Suffix: \r</li>
+</ul>
+
+<pre>
+AT+로 시작해도 되는데 그건 명령 여러 개 쓸 때 사용함
+명령 1개 써도 +써도 됨
+세미콜론으로 명령 구분
+</pre>
+
+<pre class="code">
+AT+CMD1;CMD2\r
+</pre>
+
+<h3>Commands</h3>
+<ul>
+	<li>UART_DEF: UART 통신 설정 &lt;Baud rate&gt;, &lt;Data bits&gt;, &lt;Stop bits&gt;, &lt;Parity bits&gt;, &lt;Flow control&gt;</li>
+	<li>CIPSTATUS: 연결된 클라이언트 정보 조회 (아이디, 아이피 주소 등)</li>
+	<li>CIPSEND: 클라이언트로 송신 &lt;Client ID&gt;, &lt;Length&gt; 이후 Length만큼 데이터 입력</li>
+	<li>CIFSR: 아이피 조회</li>
+	<li>CWJAP?: 연결된 와아파이 조회</li>
+</ul>

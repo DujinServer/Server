@@ -1,6 +1,8 @@
 function SplitCamelCase (value)
 {
-	return value.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
+	value = value.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
+	value = value.replace(/([A-Z])([A-Z])([a-z])/g, '$1 $2$3');
+	return value;
 }
 
 function SetTitle ()

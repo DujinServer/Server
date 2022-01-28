@@ -1,0 +1,36 @@
+<title>Server</title>
+<meta name="viewport" content="width=device-width">
+<script src="/Server/script.js"></script>
+<link rel="stylesheet" href="/Server/style.css">
+<!-- <script src="/Users/dujin/Desktop/Server/script.js"></script>
+<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css"> -->
+<h2></h2>
+<script>SetTitle()</script>
+<pre class="code">
+#include &lt;SoftwareSerial.h&gt;
+
+SoftwareSerial esp (2, 3);
+
+void setup ()
+{
+	Serial.begin(9600);
+	esp.begin(9600);
+	while (esp.available());
+	esp.println("AT+CIPMUX=1");
+	delay(100);
+	esp.println("AT+CIPSERVER=1,1");
+}
+
+void loop ()
+{
+	if (Serial.available())
+	{
+		esp.write(Serial.read());
+	}
+
+	if (esp.available())
+	{
+		Serial.write(esp.read());
+	}
+}
+</pre>
