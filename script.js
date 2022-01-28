@@ -1,3 +1,9 @@
+function getCamelCaseArray (value) 
+{
+	var reg = /([a-z0-9])([A-Z])/g;
+	return value.replace(reg, '$1 $2').split(' ');
+}
+
 function SetTitle ()
 {
 	var link = document.location.href.split('/');
