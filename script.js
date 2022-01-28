@@ -1,7 +1,6 @@
-function getCamelCaseArray (value) 
+function SplitCamelCase (value)
 {
-	var reg = /([a-z0-9])([A-Z])/g;
-	return value.replace(reg, '$1 $2').split(' ');
+	return value.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
 }
 
 function SetTitle ()
@@ -9,7 +8,7 @@ function SetTitle ()
 	var link = document.location.href.split('/');
 	var directory = link[link.length - 2];
 	var title = document.getElementsByTagName("h2")[0];
-	title.innerText =  directory;
+	title.innerText =  SplitCamelCase(directory);
 }
 
 window.addEventListener("DOMContentLoaded", function () {
