@@ -1,6 +1,6 @@
 body
 {
-	color: #24292e;
+	color: #24292E;
 	font-family: "Segoe UI";
 	font-size: 16px;
 	line-height: 1.5;
@@ -12,7 +12,7 @@ body
 
 h2, h3
 {
-	border-bottom: 1px solid #eaecef;
+	border-bottom: 1px solid #EAECEF;
 	font-weight: 600;
 	line-height: 1.25;
 	margin-bottom: 16px;
@@ -42,6 +42,26 @@ pre
 {
 	font-family: inherit;
 	white-space: pre-wrap;
+}
+
+table
+{
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 1px solid #EAECEF;
+}
+
+tr:hover
+{
+	color: #FC945C;
+}
+
+th, td
+{
+	border-bottom: 1px solid #EAECEF;
+	padding-bottom: .75rem;
+	padding-right: 1rem;
+	padding-top: .75rem;
 }
 
 .code

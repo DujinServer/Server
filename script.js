@@ -1,3 +1,5 @@
+var copyables;
+
 function SplitCamelCase (value)
 {
 	value = value.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
@@ -14,27 +16,35 @@ function SetTitle ()
 }
 
 window.addEventListener("DOMContentLoaded", function () {
-	var elements = document.getElementsByClassName("code");
+	copyables = document.querySelectorAll(".code, .copyable");
 
-	for (var element of elements)
+	for (var i = 0; i < copyables.length; i++)
 	{
-		element.oncontextmenu = event => false;
-
-		element.addEventListener("mousedown", function (event) {
-			if (event.button == 2)
-			{
-				copy(element.innerText);
-			}
-		});
+		var copyable = copyables[i];
+		// copyable.oncontextmenu = event => false;
+		copyable.onclick = function () { copy(copyable.innerText) };
 	}
 
-	function copy (value)
+	function copy (text)
 	{
+		alert("copy: " + text);
+		return;
 		var t = document.createElement("textarea");
 		document.body.appendChild(t);
-		t.value = value;
+		t.value = text;
 		t.select();
 		document.execCommand('copy');
 		document.body.removeChild(t);
 	}
+
+	// function copy (value)
+	// {
+	// 	alert(value);
+	// 	var t = document.createElement("textarea");
+	// 	document.body.appendChild(t);
+	// 	t.value = value;
+	// 	t.select();
+	// 	document.execCommand('copy');
+	// 	document.body.removeChild(t);
+	// }
 });
