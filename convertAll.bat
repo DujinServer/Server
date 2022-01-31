@@ -8,6 +8,7 @@
 :: cmd /c convert Unity
 :: cmd /c convert Unity\Socket
 :: cmd /c convert Unity\Socket\Client
+:: cmd /c convert Unity\Socket\Client\Detail
 :: cmd /c convert Unity\Socket\Client\Properties\TimeOutDelay
 :: cmd /c convert Unity\Socket\Detail
 :: cmd /c convert Unity\Socket\Properties\IPAddress
@@ -23,3 +24,4 @@
 :: cmd /c convert Unity\Socket\Methods\Send
 :: cmd /c convert Unity\Socket\Methods\Try
 :: cmd /c convert Unity\Socket\Server
+:: cmd /c convert Unity\Socket\Server\Detail

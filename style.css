@@ -83,3 +83,9 @@ th, td
 	overflow: auto;
 	padding: 16px;
 }
+
+.highlighted
+{
+	color: #FC945C;
+	font-weight: 600;
+}

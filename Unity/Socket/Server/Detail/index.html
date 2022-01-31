@@ -1,0 +1,22 @@
+<title>Server</title>
+<meta name="viewport" content="width=device-width">
+<script src="/Server/script.js"></script>
+<link rel="stylesheet" href="/Server/style.css">
+<!-- <script src="/Users/dujin/Desktop/Server/script.js"></script>
+<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css"> -->
+<h2></h2>
+<script>SetTitle()</script>
+<pre>
+모든 클라이언트에게 메시지 보낼려면 Broadcast 쓰면 되고
+특정 클라이언트에게 보낼려면 Handlers에서 선택해서 Send하면 됨
+</pre>
+
+<pre class="code">
+Handlers[<span class="highlighted">index</span>].Send("<span class="highlighted">message</span>");
+</pre>
+
+<pre>
+OnClosed에서 핸들러 모두 닫음
+핸들러를 닫아야 클라이언트에서 연결 끊겼다는 걸 알 수 있음
+서버만 닫으면 연결 끊긴지 모름
+</pre>
