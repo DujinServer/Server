@@ -1,17 +1,12 @@
-<ul>
-	<li><a href="ATCommand">AT command</a></li>
-	<li><a href="Example">Example</a></li>
-</ul>
-
 <h3>초기 설정</h3>
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 AT+UART_DEF=9600,8,1,0,0
 AT+MODE=1
 AT+CWJAP="SSID","PW"
 </pre>
 
 <h3>Setup 함수</h3>
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 AT+CIPMUX=1
 AT+CIPSERVER=1,PORT
 </pre>

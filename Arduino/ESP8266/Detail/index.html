@@ -1,9 +1,9 @@
 <title>Server</title>
 <meta name="viewport" content="width=device-width">
-<!-- <script src="/Server/script.js"></script>
-<link rel="stylesheet" href="/Server/style.css"> -->
-<script src="/Users/dujin/Desktop/Server/script.js"></script>
-<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css">
+<script src="/Server/script.js"></script>
+<link rel="stylesheet" href="/Server/style.css">
+<!-- <script src="/Users/dujin/Desktop/Server/script.js"></script>
+<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css"> -->
 <h2></h2>
 <script>SetTitle()</script>
 <h3>1. 보드레이트 설정</h3>
@@ -16,17 +16,17 @@ esp 기본 보드레이트가 115200이라서
 </pre>
 
 esp 115200으로 시작
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 esp.begin(115200);
 </pre>
 
 AT 명령으로 보드레이트 교체
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 AT+UART_DEF=9600,8,1,0,0
 </pre>
 
 esp 9600으로 교체
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 esp.begin(9600);
 </pre>
 
@@ -43,18 +43,18 @@ AP는 공유기처럼 쓰는 거 같은데 정확히 모름
 3번 둘 다 사용으로 해도 되긴 한데 굳이 그럴 필요 없음
 </pre>
 
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 AT+MODE=1
 </pre>
 
 <h3>3. 와이파이 연결</h3>
 Syntax
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 AT+CWJAP="SSID","PW"
 </pre>
 
 Example
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 AT+CWJAP="iptime mini","1234"
 </pre>
 
@@ -67,7 +67,7 @@ AT+CWJAP="iptime mini","1234"
 esp 꺼졌다가 다시 켜질 때 서버 다시 켜줘야 함
 </pre>
 
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 AT+CIPMUX=1
 </pre>
 
@@ -85,7 +85,7 @@ MUX 0으로 설정할 때도 서버 열려있으면 설정 안됨
 </pre>
 
 Syntax
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 AT+CIPSERVER=MODE,PORT
 </pre>
 
@@ -98,6 +98,6 @@ Port: 서버 포트 (0은 안됨, 1부터 가능)
 </pre>
 
 Example
-<pre class="code">
+<pre class="code" onclick="copy(innerText)">
 AT+CIPSERVER=1,1
 </pre>
