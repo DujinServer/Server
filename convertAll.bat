@@ -1,3 +1,4 @@
+:: cmd /c convert .
 :: cmd /c convert Arduino\ESP8266
 :: cmd /c convert Arduino\ESP8266\Detail
 :: cmd /c convert Arduino\ESP8266\ATCommand
