@@ -9,9 +9,10 @@ if not exist %1 (
 )
 
 set content=%1\content.html
+set header=header.html
 set output=%1\index.html
 
-if not exist header.html (
+if not exist %header% (
 	echo Header file not found
 	goto :eof
 )
@@ -23,4 +24,8 @@ if not exist %content% (
 
 if exist %output% del %output%
 
-copy /b header.html + %content% %output%
+copy %header% %output%
+
+if exist %1\Detail\ echo ^<script^>AddDetail()^</script^>>>  %output%
+
+copy /b %output% + %content% %output%

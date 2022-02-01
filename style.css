@@ -89,3 +89,8 @@ th, td
 	color: #FC945C;
 	font-weight: 600;
 }
+
+.hasDetail:hover
+{
+	color: #FC945C;
+}

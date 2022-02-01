@@ -2,10 +2,10 @@
 <meta name="viewport" content="width=device-width">
 <script src="/Server/script.js"></script>
 <link rel="stylesheet" href="/Server/style.css">
-<!-- <script src="/Users/dujin/Desktop/Server/script.js"></script>
-<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css"> -->
-<h2></h2>
-<script>SetTitle()</script>
+
+<body>
+<script>AddTitle()</script>
+</body>
 <ul>
 	<li>Prefix: AT</li>
 	<li>Suffix: \r</li>
@@ -17,7 +17,7 @@ AT+로 시작해도 되는데 그건 명령 여러 개 쓸 때 사용함
 세미콜론으로 명령 구분
 </pre>
 
-<pre class="code" onclick="copy(innerText)">
+<pre class="code" onclick="Copy(innerText)">
 AT+CMD1;CMD2\r
 </pre>
 
@@ -25,27 +25,27 @@ AT+CMD1;CMD2\r
 <table>
 	<tbody>
 		<tr>
-			<td onclick="copy(innerText)">UART_DEF</td>
+			<td onclick="Copy(innerText)">UART_DEF</td>
 			<td>UART 통신 설정 &lt;Baud rate&gt;, &lt;Data bits&gt;, &lt;Stop bits&gt;, &lt;Parity bits&gt;, &lt;Flow control&gt;</td>
 		</tr>
 
 		<tr>
-			<td onclick="copy(innerText)">CIPSTATUS</td>
+			<td onclick="Copy(innerText)">CIPSTATUS</td>
 			<td>연결된 클라이언트 정보 조회 (아이디, 아이피 주소 등)</td>
 		</tr>
 
 		<tr>
-			<td onclick="copy(innerText)">CIPSEND</td>
+			<td onclick="Copy(innerText)">CIPSEND</td>
 			<td>클라이언트로 송신 &lt;Client ID&gt;, &lt;Length&gt; 이후 Length만큼 데이터 입력</td>
 		</tr>
 
 		<tr>
-			<td onclick="copy(innerText)">CIFSR</td>
+			<td onclick="Copy(innerText)">CIFSR</td>
 			<td>아이피 조회</td>
 		</tr>
 
 		<tr>
-			<td onclick="copy(innerText)">CWJAP?</td>
+			<td onclick="Copy(innerText)">CWJAP?</td>
 			<td>연결된 와아파이 조회</td>
 		</tr>
 	</tbody>

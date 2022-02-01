@@ -1,19 +1,24 @@
-function SplitCamelCase (value)
+function AddDetail ()
 {
-	value = value.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
-	value = value.replace(/([A-Z])([A-Z])([a-z])/g, '$1 $2$3');
-	return value;
+	var title = document.getElementById("title");
+	title.className += "hasDetail";
+	
+	title.addEventListener("click", function () {
+		location.href = "Detail";
+	});
 }
 
-function SetTitle ()
+function AddTitle ()
 {
 	var link = document.location.href.split('/');
 	var directory = link[link.length - 2];
-	var title = document.getElementsByTagName("h2")[0];
+	var title = document.createElement("h2");
+	document.body.appendChild(title);
+	title.id = "title";
 	title.innerText =  SplitCamelCase(directory);
 }
 
-function copy (text)
+function Copy (text)
 {
 	var t = document.createElement("textarea");
 	document.body.appendChild(t);
@@ -21,4 +26,11 @@ function copy (text)
 	t.select();
 	document.execCommand('copy');
 	document.body.removeChild(t);
+}
+
+function SplitCamelCase (value)
+{
+	value = value.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
+	value = value.replace(/([A-Z])([A-Z])([a-z])/g, '$1 $2$3');
+	return value;
 }
