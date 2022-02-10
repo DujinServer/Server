@@ -1,0 +1,29 @@
+<title>Server</title>
+<meta name="viewport" content="width=device-width">
+<script src="/Server/script.js"></script>
+<link rel="stylesheet" href="/Server/style.css">
+<!-- <script src="/Users/dujin/Desktop/Server/script.js"></script>
+<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css"> -->
+
+<body>
+	<script>AddTitle()</script>
+</body>
+<h3>Required</h3>
+<ul>
+	<li>Visual studio</li>
+	<ul>
+		<li>C++</li>
+		<li>CMake</li>
+	</ul>
+</ul>
+
+<h3>Getting started</h3>
+<pre class="code" onclick="Copy(innerText)">
+git clone https://github.com/ydlidar/SDK
+cd SDK
+"<span class=highlighted>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community</span>\VC\Auxiliary\Build\vc.bat"
+cmake .
+msbuild Project.sln
+cd Debug
+ydlidar_test.exe
+</pre>
