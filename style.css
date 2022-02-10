@@ -15,37 +15,57 @@ body
 	font-family: "Segoe UI";
 	font-size: 16px;
 	line-height: 1.5;
-	margin-bottom: 32px;
-	margin-top: 32px;
-	padding-left: 16px;
-	padding-right: 16px;
+	margin: 16 8;
+	padding: 0 16;
 }
 
-h2, h3, h4
+h1, h2, h3
 {
-	border-bottom: 1px solid #EAECEF;
 	font-weight: 600;
-	line-height: 1.25;
-	margin-bottom: 8px;
-	margin-top: 24px;
-	padding-bottom: .3em;
 }
 
-h4
+h1, h2, tr
 {
-	margin-top: 0;
+	border-bottom: .1rem solid #EAECEF;
 }
 
-ul, ol
+h1, h2
 {
-	margin-top: 0;
-	margin-bottom: 16px;
-	padding-left: 2em;
+	margin: 0;
+	margin-bottom: .6rem;
 }
 
-ul>ul
+h1
 {
-	padding-left: 16;
+	font-size: 1.7rem;
+}
+
+h2
+{
+	font-size: 1.4rem;
+	margin-top: 1.3rem;
+}
+
+h3
+{
+	margin: 0;
+}
+
+ol, pre, ul
+{
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+ol, ul
+{
+	padding-left: 1.7rem;
+}
+
+li > ul
+{
+	margin-bottom: 0;
+	padding-left: .8rem;
 }
 
 pre
@@ -60,12 +80,7 @@ table
 	border-collapse: collapse;
 }
 
-tr
-{
-	border-bottom: 1px solid #EAECEF;
-}
-
-tr:hover
+tr:hover, .highlighted, .hasDetail:hover
 {
 	color: #FC945C;
 }
@@ -83,19 +98,11 @@ th, td
 	border-radius: 6px;
 	font-size: 90%;
 	line-height: 1.45;
-	margin-bottom: 16px;
-	margin-top: 0;
 	overflow: auto;
-	padding: 16px;
+	padding: 1rem;
 }
 
 .highlighted
 {
-	color: #FC945C;
 	font-weight: 600;
-}
-
-.hasDetail:hover
-{
-	color: #FC945C;
 }

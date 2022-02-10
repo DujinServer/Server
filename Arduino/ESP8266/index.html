@@ -1,9 +1,9 @@
 <title>Server</title>
 <meta name="viewport" content="width=device-width">
-<script src="/Server/script.js"></script>
-<link rel="stylesheet" href="/Server/style.css">
-<!-- <script src="/Users/dujin/Desktop/Server/script.js"></script>
-<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css"> -->
+<!-- <script src="/Server/script.js"></script>
+<link rel="stylesheet" href="/Server/style.css"> -->
+<script src="/Users/dujin/Desktop/Server/script.js"></script>
+<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css">
 
 <body>
 	<script>AddTitle()</script>
@@ -14,14 +14,14 @@
 	<li><a href="Example">Example</a></li>
 </ul>
 
-<h3>초기 설정</h3>
+<h2>초기 설정</h2>
 <pre class="code" onclick="Copy(innerText)">
 AT+UART_DEF=9600,8,1,0,0
 AT+MODE=1
 AT+CWJAP="SSID","PW"
 </pre>
 
-<h3>Setup 함수</h3>
+<h2>Setup 함수</h2>
 <pre class="code" onclick="Copy(innerText)">
 AT+CIPMUX=1
 AT+CIPSERVER=1,PORT

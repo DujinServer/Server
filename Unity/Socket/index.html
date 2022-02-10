@@ -1,13 +1,16 @@
 <title>Server</title>
 <meta name="viewport" content="width=device-width">
-<script src="/Server/script.js"></script>
-<link rel="stylesheet" href="/Server/style.css">
+<!-- <script src="/Server/script.js"></script>
+<link rel="stylesheet" href="/Server/style.css"> -->
+<script src="/Users/dujin/Desktop/Server/script.js"></script>
+<link rel="stylesheet" href="/Users/dujin/Desktop/Server/style.css">
 
 <body>
-<script>AddTitle()</script>
+	<script>AddTitle()</script>
 </body>
 <script>AddDetail()</script>
-<h3>Definition</h3>
+<h2>Definition</h2>
+
 <pre class="code" onclick="Copy(innerText)">
 public class Socket
 </pre>
@@ -17,36 +20,36 @@ Assembly: socket.dll
 Inheritance: (none)
 </pre>
 
-<h3>Properties</h3>
+<h2>Properties</h2>
 <ul>
 	<li><a href="Properties/IPAddress">IPAddress</a></li>
 	<li><a href="Properties/IsConnected">IsConnected</a></li>
 	<li><a href="Properties/Port">Port</a></li>
 </ul>
 
-<h3>Events</h3>
+<h2>Events</h2>
 <ul>
 	<li><a href="Events/Disconnected">Disconnected</a></li>
 	<li><a href="Events/ErrorOccurred">ErrorOccurred</a></li>
 	<li><a href="Events/Received">Received</a></li>
 </ul>
 
-<h3>Methods</h3>
-<h4>Public</h4>
+<h2>Methods</h2>
+<h3>Public</h3>
 <ul>
 	<li><a href="Methods/BeginReceiving">BeginReceiving</a></li>
 	<li><a href="Methods/Close">Close</a></li>
 	<li><a href="Methods/Send">Send</a></li>
 </ul>
 
-<h4>Protected</h4>
+<h3>Protected</h3>
 <ul>
 	<li><a href="Methods/CreateSocket">CreateSocket</a></li>
 	<li><a href="Methods/OnClosed">OnClosed</a></li>
 	<li><a href="Methods/Try">Try</a></li>
 </ul>
 
-<h3>Derived classes</h3>
+<h2>Derived classes</h2>
 <ul>
 	<li><a href="Client">Client</a></li>
 	<li><a href="Server">Server</a></li>

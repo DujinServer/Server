@@ -2,7 +2,7 @@ function AddDetail ()
 {
 	var title = document.getElementById("title");
 	title.className += "hasDetail";
-	
+
 	title.addEventListener("click", function () {
 		location.href = "Detail";
 	});
@@ -12,7 +12,7 @@ function AddTitle ()
 {
 	var link = document.location.href.split('/');
 	var directory = link[link.length - 2];
-	var title = document.createElement("h2");
+	var title = document.createElement("h1");
 	document.body.appendChild(title);
 	title.id = "title";
 	title.innerText =  SplitCamelCase(directory);
