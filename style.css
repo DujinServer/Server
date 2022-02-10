@@ -43,6 +43,11 @@ ul, ol
 	padding-left: 2em;
 }
 
+ul>ul
+{
+	padding-left: 16;
+}
+
 pre
 {
 	font-family: inherit;
