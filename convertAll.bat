@@ -12,6 +12,7 @@
 :: cmd /c convert LIDAR
 :: cmd /c convert LIDAR\YD
 :: cmd /c convert LIDAR\YD\Detail
+:: cmd /c convert LIDAR\YD\G6
 :: cmd /c convert Unity
 :: cmd /c convert Unity\Socket
 :: cmd /c convert Unity\Socket\Client
