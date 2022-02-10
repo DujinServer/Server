@@ -1,4 +1,4 @@
-cmd /c convert .
+:: cmd /c convert .
 :: cmd /c convert Arduino
 :: cmd /c convert Arduino\ESP8266
 :: cmd /c convert Arduino\ESP8266\Detail
@@ -9,7 +9,7 @@ cmd /c convert .
 :: cmd /c convert Arduino\Projector\Optoma
 :: cmd /c convert Arduino\Projector\Optoma\Commands
 :: cmd /c convert Arduino\Projector\Optoma\Example
-cmd /c convert LiDAR
+:: cmd /c convert LiDAR
 cmd /c convert LiDAR\YD
 :: cmd /c convert Unity
 :: cmd /c convert Unity\Socket
