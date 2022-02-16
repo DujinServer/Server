@@ -1,0 +1,43 @@
+<h3>test.cpp</h3>
+
+<pre class="code" onclick="Copy(innerText)">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+extern "C"
+{
+	__declspec(dllexport) void greet ()
+	{
+		cout &lt;&lt; "Hello world" &lt;&lt; endl;
+	}
+}
+</pre>
+
+<h3>program.cs</h3>
+
+<pre class="code" onclick="Copy(innerText)">
+using System.Runtime.InteropServices;
+
+class Program
+{
+	[DllImport("test.dll")]
+	static extern void greet ();
+
+	public Program ()
+	{
+		greet();
+	}
+
+	static void Main ()
+	{
+		new Program();
+	}
+}
+</pre>
+
+<pre class="code" onclick="Copy(innerText)">
+"<span class="highlighted">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community</span>\VC\Auxiliary\Build\vcvars64.bat"
+cl /EHsc /LD /nologo test.cpp
+csc /nologo program.cs
+</pre>

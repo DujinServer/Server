@@ -15,6 +15,12 @@ function AddTitle ()
 	var title = document.createElement("h1");
 	document.body.appendChild(title);
 	title.id = "title";
+
+	if (directory.includes("%23"))
+	{
+		directory = directory.replace("%23", "#");
+	}
+
 	title.innerText =  SplitCamelCase(directory);
 }
 
@@ -32,5 +38,6 @@ function SplitCamelCase (value)
 {
 	value = value.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
 	value = value.replace(/([A-Z])([A-Z])([a-z])/g, '$1 $2$3');
+	value = value.replace(/(\+)([A-Z])/g, '$1 $2');
 	return value;
 }

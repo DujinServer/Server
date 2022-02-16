@@ -8,6 +8,8 @@
 :: cmd /c convert Arduino\Projector\Optoma
 :: cmd /c convert Arduino\Projector\Optoma\Commands
 :: cmd /c convert Arduino\Projector\Optoma\Example
+:: cmd /c convert "C#"
+:: cmd /c convert "C#\C++DLL"
 :: cmd /c convert LIDAR
 :: cmd /c convert LIDAR\YD
 :: cmd /c convert LIDAR\YD\Detail
