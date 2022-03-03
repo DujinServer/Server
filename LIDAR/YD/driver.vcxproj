@@ -27,7 +27,7 @@
 		</ClCompile>
 
 		<PostBuildEvent>
-			<Command>rd /s /q Objects &amp; del driver.exp &amp; del driver.ilk &amp; del driver.lib &amp; del driver.pdb &amp; copy /y driver.dll "..\C#"</Command>
+			<Command>del driver.exp &amp; del driver.ilk &amp; del driver.lib &amp; del driver.pdb &amp; move /y driver.dll ..\C#</Command>
 		</PostBuildEvent>
 	</ItemDefinitionGroup>
 
