@@ -1,0 +1,35 @@
+<Project>
+	<ItemGroup>
+		<ProjectConfiguration Include="Release|x64"/>
+		<ClCompile Include="Sources\*.cpp"/>
+	</ItemGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+
+	<PropertyGroup>
+		<Configuration>Release</Configuration>
+		<ConfigurationType>DynamicLibrary</ConfigurationType>
+		<IntDir>Objects/</IntDir>
+		<OutDir>./</OutDir>
+		<PlatformToolset>v142</PlatformToolset>
+	</PropertyGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>Headers</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>
+				WIN32;
+				_WINDOWS;
+				NDEBUG;
+			</PreprocessorDefinitions>
+		</ClCompile>
+
+		<PostBuildEvent>
+			<Command>rd /s /q Objects &amp; del driver.exp &amp; del driver.ilk &amp; del driver.lib &amp; del driver.pdb &amp; copy /y driver.dll "..\C#"</Command>
+		</PostBuildEvent>
+	</ItemDefinitionGroup>
+
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
